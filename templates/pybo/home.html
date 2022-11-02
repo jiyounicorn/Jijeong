@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+        <div style="margin:20px 0;">
+        <form action="#" method="post">
+            {% csrf_token %}
+            <input type="text" name="siteurl" placeholder="qr을 만들 사이트 주소를 넣어주세요."/>
+            <input type="submit" value="MAKE QR" />
+        </form>
+        </div>
+
+        <div style="margin:20px 0;">
+        {% if success %}
+            <img src="/{{qrlink}}" /> <br>
+            <span>{{siteurl}}</span>
+        {% else %}
+            <p>QR을 생성하세요.</p>
+        {% endif %}
+        </div>
+{% endblock %}

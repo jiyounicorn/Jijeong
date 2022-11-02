@@ -1,0 +1,70 @@
+{% load static %}
+<!doctype html>
+<html lang="ko">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+    <!-- pybo CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <!-- main CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+   <meta name="viewport" content="width=device-width, user-scalable=no">
+   <meta name="viewport" content="viewport-fit=cover">
+    <title>Hello, JiJeong!</title>
+</head>
+<body>
+<div class="bg">
+      <div class="pd">
+        <div class="header_area">
+            <h1 class="logo_area">
+        <div class="logo">
+            <a href="http://jijeong.pythonanywhere.com/pybo/question/create/">
+            <img src="{% static 'img/logo2.PNG' %}">
+            </a>
+        </div>
+         <h1 class="logoarea">
+         <div class="logo_1">
+            <a href="">
+            <img src="{% static 'img/logo1.png' %}">
+            </a>
+        </div>
+        </h1>
+        </div>
+    </div>
+</div>
+{% include "navbar.html" %}
+<!-- 기본 템플릿 안에 삽입될 내용 Start -->
+
+
+        <div class="create_area">
+        <a href="http://jijeong.pythonanywhere.com/pybo/question/create/">
+            <div class="create">
+                <img src="{% static 'img/phone.PNG' %}">
+                <div class="product1">
+               &nbsp&nbsp&nbsp&nbsp&nbsp <b>QR코드 내용 입력하기</b>
+                <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 생활용품에 부착할 <br>&nbspQR코드 내용을 입력해주세요
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="create_1">
+                <img src="{% static 'img/hed.png' %}">
+                <div class="product_1">
+               &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<b>QR코드 생성하기</b>
+               <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp밑에 목록의 URL을 복사한 후 <br>&nbsp링크에 붙여넣어 QR코드를 생성하세요
+                </div>
+            </div>
+        </a>
+        </div>
+</body>
+</html>
+{% block content %}
+{% endblock %}
+<!-- 기본 템플릿 안에 삽입될 내용 End -->
+<!-- jQuery JS -->
+<script src="{% static 'jquery-3.4.1.min.js' %}"></script>
+<!-- Bootstrap JS -->
+<script src="{% static 'bootstrap.min.js' %}"></script>
